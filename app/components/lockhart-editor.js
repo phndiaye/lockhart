@@ -1,0 +1,1 @@
+export { default } from 'lockhart/components/lockhart-editor';

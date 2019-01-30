@@ -1,0 +1,66 @@
+:root {
+  --default-radius: 2px;
+  --min-editor-height: 400px;
+  --grid-base: 2px;
+
+  --light-gray: #f9f9f9;
+
+  --shades-0: #ffffff;
+  --shades-50: #efefef;
+  --shades-200: #e2e4e6;
+  --shades-300: #D6DADC;
+
+  --border-color: var(--shades-300);
+}
+
+.lockhart {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--border-color);
+}
+
+.lockhart .ProseMirror-menubar {
+  border-bottom: 1px solid var(--border-color);
+  display: flex;
+  min-height: 0px !important;
+  padding: 5px;
+  width: 100%;
+}
+
+.lockhart .ProseMirror-menubar .ProseMirror-menuitem {
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.lockhart .ProseMirror-menubar .ProseMirror-menuitem .ProseMirror-icon {
+  border-radius: var(--default-radius);
+
+  height: 40px;
+  width: 40px;
+  padding: 2px;
+
+  text-align: center;
+  transition: background-color 0.2s ease-in;
+}
+
+.lockhart .ProseMirror-menubar .ProseMirror-menuitem .ProseMirror-icon svg {
+  height: 100%;
+  width: 100%;
+}
+
+.lockhart .ProseMirror-menubar .ProseMirror-menuitem .ProseMirror-icon.ProseMirror-menu-active {
+  background-color: var(--shades-50);
+}
+
+.lockhart .ProseMirror-menubar .ProseMirror-menuitem .ProseMirror-icon.ProseMirror-menu-disabled {
+  opacity: 0.2;
+}
+
+.lockhart__editor {
+  height: var(--min-editor-height);
+  padding: 0px 15px;
+}
+
+.lockhart__editor:focus {
+  outline: none;
+}
