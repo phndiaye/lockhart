@@ -1,5 +1,11 @@
-import { menuBar, icons, MenuItem } from 'prosemirror-menu';
-import { toggleMark } from 'prosemirror-commands';
+import { menuBar, MenuItem } from 'prosemirror-menu';
+import { toggleMark } from 'prosemirror-commands';
+
+const faIcon = (name) => {
+  let node = document.createElement('i');
+  node.setAttribute('class', `fa fa-${name}`);
+  return { dom: node };
+};
 
 /**
  * Builds a relevant menu based on the schema's default marks.
@@ -25,19 +31,21 @@ class MenuBuilder {
    * Given a schema, build the relevant menu items by looking into its default
    * marks.
    *
-   * `
-   *
    */
   _buildMenuItems() {
     let r = {}, type;
     console.log(this.schema.marks);
 
     if (type = this.schema.marks.strong) {
-      r.toggleStrong = this._buildMarkupItem(type, { title: 'Bold', icon: icons.strong })
+      r.toggleStrong = this._buildMarkupItem(type, {
+        title: 'Bold', icon: faIcon('bold')
+      });
     }
 
     if (type = this.schema.marks.em) {
-      r.toggleEm = this._buildMarkupItem(type, {title: "Italic", icon: icons.em})
+      r.toggleEm = this._buildMarkupItem(type, {
+        title: "Italic", icon: faIcon('italic')
+      });
     }
 
     let compact = (array) => array.filter(x => x);

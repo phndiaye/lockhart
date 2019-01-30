@@ -35,6 +35,9 @@
 .lockhart .ProseMirror-menubar .ProseMirror-menuitem .ProseMirror-icon {
   border-radius: var(--default-radius);
 
+  display: flex;
+  align-items: center;
+
   height: 40px;
   width: 40px;
   padding: 2px;
@@ -43,8 +46,7 @@
   transition: background-color 0.2s ease-in;
 }
 
-.lockhart .ProseMirror-menubar .ProseMirror-menuitem .ProseMirror-icon svg {
-  height: 100%;
+.lockhart .ProseMirror-menubar .ProseMirror-menuitem .ProseMirror-icon i.fa {
   width: 100%;
 }
 

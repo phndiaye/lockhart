@@ -21,9 +21,10 @@
     "test:all": "ember try:each"
   },
   "dependencies": {
+    "ember-auto-import": "^1.2.18",
     "ember-cli-babel": "^6.16.0",
     "ember-cli-htmlbars": "^3.0.1",
-    "ember-auto-import": "^1.2.18",
+    "font-awesome": "^4.7.0",
     "prosemirror-commands": "^1.0.7",
     "prosemirror-menu": "^1.0.5",
     "prosemirror-model": "^1.6.3",
